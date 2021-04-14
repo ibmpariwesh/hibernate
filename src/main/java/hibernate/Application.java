@@ -15,9 +15,13 @@ public class Application {
 		SessionFactory sessionFactory  = metadata.getSessionFactoryBuilder().build();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		Employee e1 = new Employee();
+		Employee e1 = new Employee();//transient
 		e1.setName("Pariwesh");
-		session.save(e1);
+//		session.save(e1); //makes it persistent
+//		Employee employee = session.find(Employee.class, 1);
+//		employee.setName("Ram");
+//		System.out.println(employee.getName());
+//		session.update(employee);
 		session.getTransaction().commit();
 		
 	}

@@ -17,11 +17,11 @@ public class Application {
 		session.beginTransaction();
 		Employee e1 = new Employee();//transient
 		e1.setName("Pariwesh");
-//		session.save(e1); //makes it persistent
-//		Employee employee = session.find(Employee.class, 1);
-//		employee.setName("Ram");
-//		System.out.println(employee.getName());
-//		session.update(employee);
+		Account account = new Account();
+		account.setNumber(354646);
+		account.setEmployee(e1);
+		session.save(e1);
+		session.save(account);
 		session.getTransaction().commit();
 		
 	}

@@ -23,8 +23,8 @@ public class Employee {
 	private String name;
 //	age;
 //	dob;
-	@OneToOne(cascade = CascadeType.ALL)
-	private Account account;
+//	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//	private Account account;
 	public Integer getId() {
 		return id;
 	}
@@ -38,7 +38,7 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+//
 	public Account getAccount() {
 		return account;
 	}

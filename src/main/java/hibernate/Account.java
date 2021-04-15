@@ -15,8 +15,8 @@ public class Account {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private Integer number;
-//	@OneToOne(cascade = CascadeType.ALL)
-//	private Employee employee;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Employee employee;
 	public Integer getId() {
 		return id;
 	}
@@ -29,10 +29,10 @@ public class Account {
 	public void setNumber(Integer number) {
 		this.number = number;
 	}
-//	public Employee getEmployee() {
-//		return employee;
-//	}
-//	public void setEmployee(Employee employee) {
-//		this.employee = employee;
-//	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
 }
